@@ -1,4 +1,4 @@
-//Gabriel Batista
+// Gabriel Batista
 package model;
 
 public class Meta {
@@ -7,12 +7,19 @@ public class Meta {
     private double valorAlvo;
     private double valorPoupado;
 
+    // Construtor Padrão (Vazio)
+    public Meta() {
+        this.valorPoupado = 0.0;
+    }
+
+    // Construtor com Parâmetros
     public Meta(String objetivo, double valorAlvo) {
         this.objetivo = objetivo;
         this.valorAlvo = valorAlvo;
         this.valorPoupado = 0.0;
     }
 
+    // Getters e Setters
     public String getObjetivo() {
         return objetivo;
     }
