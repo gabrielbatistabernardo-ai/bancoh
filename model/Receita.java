@@ -1,38 +1,36 @@
-//Luiz Gustavo
+// Luiz Gustavo
 package model;
 
 public class Receita {
-    
-    //atributos
+
+    // Atributos
     private String origem;
     private double valor;
-    
-    //construtor
+
+    // Construtor Padrão (Vazio)
+    public Receita() {
+    }
+
+    // Construtor com Parâmetros
     public Receita(String origem, double valor) {
-        
         this.origem = origem;
         this.valor = valor;
     }
-    //metodos
+
+    // Métodos Getters e Setters
     public String getOrigem() {
-        
         return this.origem;
-        
     }
+
     public void setOrigem(String origem) {
-        
         this.origem = origem;
-        
     }
+
     public double getValor() {
-        
         return this.valor;
-        
     }
+
     public void setValor(double valor) {
-        
         this.valor = valor;
-        
     }
-    
 }
