@@ -1,4 +1,3 @@
-// YUDY
 package model;
 
 public class Despesa {
@@ -7,12 +6,19 @@ public class Despesa {
     private double valor;
     private String status;
 
+    // 1. Construtor Padrão (Vazio)
+    public Despesa() {
+        this.status = "Pendente";
+    }
+
+    // 2. Construtor com Parâmetros
     public Despesa(String descricao, double valor) {
         this.descricao = descricao;
         this.valor = valor;
         this.status = "Pendente";
     }
 
+    // 3. Encapsulamento: Getters e Setters
     public String getDescricao() {
         return descricao;
     }
@@ -35,5 +41,14 @@ public class Despesa {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    // 4. Métodos de Regra de Negócio (Encapsulamento do Comportamento)
+    public boolean isPaga() {
+        return "Paga".equalsIgnoreCase(this.status);
+    }
+
+    public void marcarComoPaga() {
+        this.status = "Paga";
     }
 }
